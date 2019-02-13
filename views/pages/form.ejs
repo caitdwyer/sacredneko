@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Heroku Hosted Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main2.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="bg-contact2" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form method="post" action="/form" class="contact2-form validate-form">
+					<span class="contact2-form-title">
+						You Call This Archaeology?
+					</span>
+
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="NAME"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input2" type="text" name="email">
+						<span class="focus-input2" data-placeholder="EMAIL"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Valid phone number is required: 4162309548">
+						<input class="input2" type="text" name="phone">
+						<span class="focus-input2" data-placeholder="PHONE"></span>
+					</div>
+
+					<div class="wrap-input2 validate-input" data-validate = "Valid zip code is required: 22601">
+						<input class="input2" type="text" name="zip">
+						<span class="focus-input2" data-placeholder="ZIP CODE"></span>
+					</div>
+
+					<!--<div class="wrap-input2 validate-input" data-validate = "Favorite Indiana Jones movie selection is required">
+						<span class="focus-input2">FAVORITE INDIANA JONES MOVIE</span>
+						<select name="movie">
+						    <option value="Ark">Raiders of the Lost Ark</option>
+						    <option value="Doom">Temple of Doom</option>
+						    <option value="Crusade">Last Crusade</option>
+						    <option value="Skull">Kingdom of the Crystal Skull</option>
+						 </select>
+					</div>-->
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<input type="submit" value="Submit">
+							<!-- <button class="contact2-form-btn">
+								Submit Info
+							</button> -->
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+
+
+</body>
+</html>
