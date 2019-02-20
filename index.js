@@ -68,12 +68,12 @@ express()
                 },
                 body: [{
                     keys: {
-                        SubKey: 123
+                        SubKey: req.body.SubKey
                     },
                     values: {
                         Email: req.body.email,
                         FirstName: req.body.firstname,
-                        LastName: req.body.firstname,
+                        LastName: req.body.lastname,
                         Phone: phoneDigits,
                         'Zip Code': req.body.zipcode
                     }

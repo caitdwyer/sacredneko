@@ -65,6 +65,10 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
+
+    var SubKey = (new URLSearchParams(location.search)).get('SubKey')
+
+    $('#SubKeyInput').val(SubKey)
     
     
 
