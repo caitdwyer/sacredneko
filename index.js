@@ -55,7 +55,7 @@ express()
         // logic to ping MC & SC here
         request(auth_options, function(error, response, body) {
             if (error) throw new Error(error);
-            console.log(body);
+            console.trace(body);
             let token = "Bearer " + body.accessToken;
 
             const de_insert = {
@@ -103,7 +103,7 @@ express()
             request(sms_options, function(err, r, b) {
                 if (err) throw new Error(err);
 
-                console.log(b);
+                console.trace(b);
             });
 
         });
