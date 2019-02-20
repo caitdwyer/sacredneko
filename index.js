@@ -46,6 +46,7 @@ express()
     .set('views', path.join(__dirname, 'views'))
     .set('view engine', 'ejs')
     .get('/', (req, res) => res.render('pages/index'))
+    .get('/thanks', (req, res) => res.render('pages/thanks'))
     .get('/cool', (req, res) => res.send(cool()))
     .get('/helloworld', (req, res) => res.send('hello world'))
     .get('/form', (req, res) => res.render('pages/form'))
@@ -113,30 +114,6 @@ express()
             });
 
         });
-        res.send('Thanks for submitting a form');
+        res.redirect('/thanks');
     })
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-
-
-/*
-var request = require("request");
-
-var options = { method: 'POST',
-  url: 'https://auth.exacttargetapis.com/v1/requestToken',
-  headers: 
-   { 'Postman-Token': 'b513afc7-fa50-47c6-8f7f-20ea89fff653',
-     'Cache-Control': 'no-cache',
-     'Content-Type': 'application/json' },
-  body: 
-   { clientId: 'q4upcyyfbed1ldmj4j8u4l54',
-     clientSecret: 'CHh4P3z2icCxKKjUq54q8Cd4' },
-  json: true };
-
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
-
-  console.log(body);
-});
-
-*/
