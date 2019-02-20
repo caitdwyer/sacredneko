@@ -105,6 +105,12 @@ express()
 
                 console.trace(b);
             });
+            // next call
+            request(de_insert, function(err, r, b) {
+                if (err) throw new Error(err);
+
+                console.trace(b);
+            });
 
         });
         res.send('Thanks for submitting a form');
