@@ -11,7 +11,6 @@ const auth_options = {
     method: 'POST',
     url: 'https://auth.exacttargetapis.com/v1/requestToken',
     headers: {
-        'Postman-Token': 'fa90cab9-64bc-483d-ba38-8279dcc10142',
         'Cache-Control': 'no-cache',
         'Content-Type': 'application/json'
     },
@@ -21,6 +20,22 @@ const auth_options = {
     },
     json: true
 };
+
+/**
+
+
+request({
+	url: 'https://yourInstance.salesforce.com/services/data/v20.0/sobjects/Account/ ',
+	headers: {
+		Authorization: 'Bearer token'
+	},
+	json: true,
+	body: {
+		/// body here
+	}
+})
+
+*/
 
 express()
     .use(bodyParser.json())
@@ -43,11 +58,33 @@ express()
             console.log(body);
             let token = "Bearer " + body.accessToken;
 
+            const de_insert = {
+                method: 'POST',
+                url: 'https://www.exacttargetapis.com/hub/v1/dataevents/key:de_adventurers/rowset',
+                headers: {
+                    'Cache-Control': 'no-cache',
+                    'Content-Type': 'application/json',
+                    Authorization: token
+                },
+                body: [{
+                    keys: {
+                        SubKey: 123
+                    },
+                    values: {
+                        Email: req.body.email,
+                        FirstName: req.body.firstname,
+                        LastName: req.body.firstname,
+                        Phone: phoneDigits,
+                        'Zip Code': req.body.zipcode
+                    }
+                }],
+                json: true
+            };
+
             const sms_options = {
                 method: 'POST',
                 url: 'https://www.exacttargetapis.com/sms/v1/messageContact/MTo3ODow/send',
                 headers: {
-                    'Postman-Token': '5e8fb9d9-4b73-42bb-895f-8e5583a93d4a',
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
                     Authorization: token
@@ -63,11 +100,12 @@ express()
                 json: true
             };
             // next call
-            request(sms_options, function (err, r, b) {
-			    if (err) throw new Error(err);
+            request(sms_options, function(err, r, b) {
+                if (err) throw new Error(err);
 
-			    console.log(b);
-			});
+                console.log(b);
+            });
+
         });
         res.send('Thanks for submitting a form');
     })
