@@ -82,9 +82,25 @@ express()
                 json: true
             };
 
+  //           var options = { method: 'POST',
+  // url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_thanks/send',
+  // headers: 
+  //  { 'Postman-Token': 'a65cfa11-57cf-45c6-b68a-d2d5823a14ff',
+  //    'Cache-Control': 'no-cache',
+  //    'Content-Type': 'application/json',
+  //    Authorization: 'Bearer 4y6jG4M5i1M0SFiC05bQZAAu' },
+  // body: 
+  //  { From: { Address: 'junior@indianajones.com', Name: 'Indiana Jones' },
+  //    To: 
+  //     { Address: 'caitlin.dwyer+sa@salesforce.com',
+  //       SubscriberKey: '00Q1U000004OksRUAS',
+  //       ContactAttributes: { SubscriberAttributes: { FirstName: 'Caitie', Zip: '22601' } } },
+  //    OPTIONS: { RequestType: 'SYNC' } },
+  // json: true };
+
             const email_send = {
                 method: 'POST',
-                url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_form_thanks/send',
+                url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_thanks/send',
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
