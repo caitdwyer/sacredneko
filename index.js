@@ -176,7 +176,7 @@ express()
             request(email_options, function(err, r, b) {
                 if (err) throw new Error(err);
 
-                console.trace(b);
+                console.trace(JSON.strigify(b));
             });
 
         });
