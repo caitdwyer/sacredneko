@@ -104,7 +104,7 @@ express()
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
-                    Authorization: 'Bearer 49qUvcvU9zgm8uYf80Ljl3oc'
+                    Authorization: 'Bearer 4y6jG4M5i1M0SFiC05bQZAAu'
                 },
                 body: {
                     From: {
@@ -122,7 +122,7 @@ express()
                         }
                     },
                     OPTIONS: {
-                        RequestType: 'ASYNC'
+                        RequestType: 'SYNC'
                     }
                 },
                 json: true
