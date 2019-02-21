@@ -96,12 +96,12 @@ express()
                         Name: 'Indiana Jones'
                     },
                     To: {
-                        Address: 'caitlin.dwyer@salesforce.com',
-                        SubscriberKey: '00Q1U000004OksRUAS',
+                        Address: req.body.email,
+                        SubscriberKey: req.body.SubKey,
                         ContactAttributes: {
                             SubscriberAttributes: {
-                                FirstName: 'Alexandra',
-                                Zip: '10001'
+                                FirstName: req.body.firstname,
+                                Zip: req.body.zip
                             }
                         }
                     },
