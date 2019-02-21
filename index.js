@@ -88,7 +88,7 @@ express()
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
-                    Authorization: 'Bearer 4y6jG4M5i1M0SFiC05bQZAAu'
+                    Authorization: token,
                 },
                 body: {
                     From: {
@@ -97,7 +97,7 @@ express()
                     },
                     To: {
                         Address: 'caitlin.dwyer@salesforce.com',
-                        SubscriberKey: req.body.SubKey,
+                        SubscriberKey: '00Q1U000004OksRUAS',
                         ContactAttributes: {
                             SubscriberAttributes: {
                                 FirstName: 'Alexandra',
