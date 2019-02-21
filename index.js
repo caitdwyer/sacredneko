@@ -77,7 +77,7 @@ express()
                         FirstName: req.body.firstname,
                         LastName: req.body.lastname,
                         Phone: phoneDigits,
-                        Zip: [zip]
+                        Zip: zip
                     }
                 }],
                 json: true
@@ -102,7 +102,7 @@ express()
                         ContactAttributes: {
                             SubscriberAttributes: {
                                 FirstName: req.body.firstname,
-                                Zip: [zip]
+                                Zip: zip
                             }
                         }
                     },
