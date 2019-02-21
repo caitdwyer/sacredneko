@@ -88,7 +88,7 @@ express()
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
-                    Authorization: token,
+                    Authorization: token
                 },
                 body: {
                     From: {
