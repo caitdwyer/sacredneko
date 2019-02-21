@@ -76,9 +76,39 @@ express()
                         FirstName: req.body.firstname,
                         LastName: req.body.lastname,
                         Phone: phoneDigits,
-                        'Zip Code': req.body.zipcode
+                        Zip: req.body.zipcode
                     }
                 }],
+                json: true
+            };
+
+            const email_send = {
+                method: 'POST',
+                url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_form_thanks/send',
+                headers: {
+                    'Cache-Control': 'no-cache',
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer 49qUvcvU9zgm8uYf80Ljl3oc'
+                },
+                body: {
+                    From: {
+                        Address: 'junior@indianajones.com',
+                        Name: 'Indiana Jones'
+                    },
+                    To: {
+                        Address: req.body.email,
+                        SubscriberKey: req.body.SubKey,
+                        ContactAttributes: {
+                            SubscriberAttributes: {
+                                FirstName: req.body.firstname,
+                                Zip: req.body.zipcode
+                            }
+                        }
+                    },
+                    OPTIONS: {
+                        RequestType: 'ASYNC'
+                    }
+                },
                 json: true
             };
 
@@ -108,6 +138,12 @@ express()
             });
             // next call
             request(de_insert, function(err, r, b) {
+                if (err) throw new Error(err);
+
+                console.trace(b);
+            });
+            // next call
+            request(email_send, function(err, r, b) {
                 if (err) throw new Error(err);
 
                 console.trace(b);
