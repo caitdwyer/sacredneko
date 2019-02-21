@@ -53,7 +53,7 @@ express()
     .post('/form', function(req, res) {
         console.log(req.body);
         let phoneDigits = req.body.phone;
-        let zip = req.body.zipcode;
+        let zip = req.body.zip;
         // logic to ping MC & SC here
         request(auth_options, function(error, response, body) {
             if (error) throw new Error(error);
