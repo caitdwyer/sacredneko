@@ -323,7 +323,7 @@ textarea.input2 + .focus-input2::after {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: rgba(222,142,72,0.77) !important;
+  background: rgba(222,142,72,0.77);
   top: 0;
   left: -100%;
 
