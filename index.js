@@ -53,6 +53,7 @@ express()
     .post('/form', function(req, res) {
         console.log(req.body);
         let phoneDigits = req.body.phone;
+        let zip = req.body.zipcode;
         // logic to ping MC & SC here
         request(auth_options, function(error, response, body) {
             if (error) throw new Error(error);
@@ -76,7 +77,7 @@ express()
                         FirstName: req.body.firstname,
                         LastName: req.body.lastname,
                         Phone: phoneDigits,
-                        Zip: req.body.zipcode
+                        Zip: zip
                     }
                 }],
                 json: true
@@ -101,7 +102,7 @@ express()
                         ContactAttributes: {
                             SubscriberAttributes: {
                                 FirstName: req.body.firstname,
-                                Zip: req.body.zipcode
+                                Zip: zip
                             }
                         }
                     },
