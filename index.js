@@ -82,35 +82,35 @@ express()
                 json: true
             };
 
-            const email_options = {
-                method: 'POST',
-                url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_thanks/send',
-                headers: {
-                    'Cache-Control': 'no-cache',
-                    'Content-Type': 'application/json',
-                    Authorization: token
-                },
-                body: {
-                    From: {
-                        Address: 'junior@indianajones.com',
-                        Name: 'Indiana Jones'
-                    },
-                    To: {
-                        Address: req.body.email,
-                        SubscriberKey: req.body.SubKey,
-                        ContactAttributes: {
-                            SubscriberAttributes: {
-                                FirstName: req.body.firstname,
-                                Zip: req.body.zip
-                            }
-                        }
-                    },
-                    OPTIONS: {
-                        RequestType: 'SYNC'
-                    }
-                },
-                json: true
-            };
+            // const email_options = {
+            //     method: 'POST',
+            //     url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_thanks/send',
+            //     headers: {
+            //         'Cache-Control': 'no-cache',
+            //         'Content-Type': 'application/json',
+            //         Authorization: token
+            //     },
+            //     body: {
+            //         From: {
+            //             Address: 'junior@indianajones.com',
+            //             Name: 'Indiana Jones'
+            //         },
+            //         To: {
+            //             Address: req.body.email,
+            //             SubscriberKey: req.body.SubKey,
+            //             ContactAttributes: {
+            //                 SubscriberAttributes: {
+            //                     FirstName: req.body.firstname,
+            //                     Zip: req.body.zip
+            //                 }
+            //             }
+            //         },
+            //         OPTIONS: {
+            //             RequestType: 'SYNC'
+            //         }
+            //     },
+            //     json: true
+            // };
 
             const sms_options = {
                 method: 'POST',
@@ -143,11 +143,11 @@ express()
                 console.trace(b);
             });
             // next call
-            request(email_options, function(err, r, b) {
-                if (err) throw new Error(err);
+            // request(email_options, function(err, r, b) {
+            //     if (err) throw new Error(err);
 
-                console.trace(JSON.stringify(b));
-            });
+            //     console.trace(JSON.stringify(b));
+            // });
 
         });
         res.redirect('/thanks');
