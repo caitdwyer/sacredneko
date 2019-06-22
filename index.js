@@ -124,7 +124,7 @@ express()
                     Subscribe: true,
                     Resubscribe: true,
                     mobileNumbers: [phoneDigits],
-                    keyword: 'US_SNAKES',
+                    keyword: 'SNAKES',
                     Override: true,
                     messageText: "Throw me the idol! I'll throw you the whip!"
                 },
