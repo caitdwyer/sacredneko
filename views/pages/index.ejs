@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <% include ../partials/header.ejs %>
+    <% include ../partials/header.ejs %> <!-- HTML header inserted as partial with JS -->
 </head>
 
 <body>
@@ -124,12 +124,13 @@
 
         <br>
 
-        <a href="/form" class="btn" style="background: rgb(255, 192, 90); color: #ffffff; text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 10px 24px;">Make My Luck Eternal</a>
+        <a href="/form?SubKey=00Q1U000004P9W9UAK" class="btn" style="background: rgb(255, 192, 90); color: #ffffff; text-transform: uppercase; font-size: 18px; font-weight: bold; padding: 10px 24px;">Make My Luck Eternal</a>
 
     </center>
 
 </body>
 
+<!-- Bootstrap component for popover effect: using jQuery selector to enable Bootstrap functionn -->
 <script>
     $(function() {
         $('[data-toggle="popover"]').popover()
