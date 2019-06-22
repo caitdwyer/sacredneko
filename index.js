@@ -61,6 +61,7 @@ express()
 
             const de_insert = {
                 method: 'POST',
+                //url: 'https://www.exacttargetapis.com/hub/v1/dataevents/key:de_adventurers/rowset',
                 url: 'https://www.exacttargetapis.com/hub/v1/dataevents/key:de_blessedcats/rowset',
                 headers: {
                     'Cache-Control': 'no-cache',
