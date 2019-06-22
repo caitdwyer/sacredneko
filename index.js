@@ -132,8 +132,6 @@ express()
             };
 
 
-
-
             // next call
             request(sms_options, function(err, r, b) {
                 if (err) throw new Error(err);
