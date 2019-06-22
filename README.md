@@ -1,5 +1,5 @@
 # sacrednneko
-CCPS 530 Final Project
+<strong>CCPS 530 Final Project</strong>
 
 Started code provided via the Heroku Dev Center. The steps below can be used to deploy a stub Node.js app to get started.
 
