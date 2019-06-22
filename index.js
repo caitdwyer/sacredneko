@@ -53,7 +53,7 @@ express()
     .post('/form', function(req, res) {
         console.log(req.body);
         let phoneDigits = req.body.phone;
-        // logic to ping MC & SC here
+        // logic to ping MC here
         request(auth_options, function(error, response, body) {
             if (error) throw new Error(error);
             console.trace(body);
@@ -85,7 +85,7 @@ express()
 
             const email_options = {
                 method: 'POST',
-                url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:ts_thanks/send',
+                url: 'https://www.exacttargetapis.com/messaging/v1/messageDefinitionSends/key:73700/send',
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
