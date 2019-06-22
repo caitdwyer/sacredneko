@@ -114,7 +114,7 @@ express()
 
             const sms_options = {
                 method: 'POST',
-                url: 'https://www.exacttargetapis.com/sms/v1/messageContact/MTo3ODow/send',
+                url: 'https://www.exacttargetapis.com/sms/v1/messageContact/MTI6Nzg6MA/send',
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
@@ -124,14 +124,12 @@ express()
                     Subscribe: true,
                     Resubscribe: true,
                     mobileNumbers: [phoneDigits],
-                    keyword: 'SNAKES',
+                    keyword: 'US_SNAKES',
                     Override: true,
                     messageText: "Throw me the idol! I'll throw you the whip!"
                 },
                 json: true
             };
-
-
             // next call
             request(sms_options, function(err, r, b) {
                 if (err) throw new Error(err);
@@ -144,7 +142,7 @@ express()
 
                 console.trace(b);
             });
-            next call
+            // next call
             request(email_options, function(err, r, b) {
                 if (err) throw new Error(err);
 
