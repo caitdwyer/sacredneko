@@ -15,8 +15,8 @@ const auth_options = {
         'Content-Type': 'application/json'
     },
     body: {
-        clientId: 'ly953984jrib62wrltaa4d99',
-        clientSecret: 'B1ssz6lsOVtwY6dSP3IXFn9j'
+        clientId: '#',
+        clientSecret: '#'
     },
     json: true
 };
