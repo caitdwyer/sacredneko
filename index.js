@@ -114,7 +114,7 @@ express()
 
             const sms_options = {
                 method: 'POST',
-                url: 'https://www.exacttargetapis.com/sms/v1/messageContact/MTI6Nzg6MA/send',
+                url: 'https://www.exacttargetapis.com/sms/v1/messageContact/MTc6Nzg6MA/send',
                 headers: {
                     'Cache-Control': 'no-cache',
                     'Content-Type': 'application/json',
@@ -124,9 +124,9 @@ express()
                     Subscribe: true,
                     Resubscribe: true,
                     mobileNumbers: [phoneDigits],
-                    keyword: 'US_SNAKES',
+                    keyword: 'LUCKYCAT',
                     Override: true,
-                    messageText: "Throw me the idol! I'll throw you the whip!"
+                    messageText: "You can haz blessings"
                 },
                 json: true
             };
